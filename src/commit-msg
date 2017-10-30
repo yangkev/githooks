@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Called after a user enters a commit message
+#
+# The only argument passed to this hook is the name of the file
+# that contains the commit message
+
+HOOKPATH=".git/hooks/githooks/src"
+
+$HOOKPATH/prepend-branch-name "$1"
